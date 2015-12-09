@@ -11,6 +11,7 @@ ew <- 2#edge.width
 cm <- 2
 vc <- "orange"
 
+
 #--- example 1
 set.seed(1210)
 g <- make_ring(8)
@@ -41,19 +42,26 @@ plot(g,          layout=lay, vertex.size=vs, edge.color=ec, edge.label.cex=elx, 
 title("(d) Local Betweenness\ncutoff 0.29", cex.main = cm)
 
 
+# Comments and Discussion:
+# This simple example illustrates, that vertex betweenness values change,
+# if the edge weights are changed and the cutoff parameters are chosen constant.
+# Ring shape of the graph, for easier reconstring the calculation;
+#
+# 1. define edge weights as in plot (a)
+# 2. calculate vertex betweenness with cutoff 0.29 (b)
+# 3. define new edge weights as in plot (c)
+# 4. calculate vertex betweenness with cutoff 0.29 (d)
 
 
-#--- set plotting parameters
-vs <- 20# vertex.size
-ec <- gray(0.8)#edge.color
-elx <- 1# edge.label.cex
-elc <- "black"#,edge.label.color
-vlc <- 1#vertex.label.cex
-ew <- 2#edge.width
-cm <- 2
-vc <- "orange"
+
 
 #--- example 2
+##--- adjust plotting parameters
+vs <- 20# vertex.size
+elx <- 1# edge.label.cex
+vlc <- 1#vertex.label.cex
+
+
 set.seed(1210)
 g <- make_ring(20)
 lay <- layout.auto(g)
@@ -81,3 +89,14 @@ bl.3 <- estimate_betweenness(g, cutoff=Inf)
 V(g)$name <- bl.3
 plot(g,          layout=lay, vertex.size=vs, edge.color=ec, edge.label.cex=elx, vertex.label.cex=vlc, edge.width=ew, edge.label.color=elc, vertex.color=vc)
 title("(d) Global Betweenness\ncutoff Inf", cex.main = cm)
+
+
+# Comments and Discussion:
+# This simple example illustrates, that vertex betweenness values change,
+# if the edge weights are constant and the cutoff parameters change.
+# Ring shape of the graph, for easier reconstring the calculation;
+#
+# 1. define edge weights as in plot (a)
+# 2. calculate vertex betweenness with cutoff 6 (b)
+# 2. calculate vertex betweenness with cutoff 9 (c)
+# 4. calculate vertex betweenness with cutoff Inf (d)
