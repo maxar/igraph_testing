@@ -168,27 +168,3 @@ title("(d) Global Betweenness\ncutoff Inf", cex.main = cm)
 # 2. calculate vertex betweenness with cutoff 6 (b)
 # 3. calculate vertex betweenness with cutoff 9 (c)
 # 4. calculate vertex betweenness with cutoff Inf (d)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
