@@ -104,7 +104,7 @@ title("(d) Local Betweenness\ncutoff 0.29", cex.main = cm)
 # Comments and Discussion:
 # This simple example illustrates, that vertex betweenness values change,
 # if the edge weights are changed and the cutoff parameters are chosen constant.
-# Ring shape of the graph, for easier reconstring the calculation;
+# Ring shape to reconstruct the calculation easier;
 #
 # 1. define edge weights as in plot (a)
 # 2. calculate vertex betweenness with cutoff 0.29 (b)
@@ -162,7 +162,7 @@ title("(d) Global Betweenness\ncutoff Inf", cex.main = cm)
 # Comments and Discussion:
 # This simple example illustrates, that vertex betweenness values change,
 # if the edge weights are constant and the cutoff parameters change.
-# Ring shape of the graph, for easier reconstring the calculation;
+# Ring shape to reconstruct the calculation easier;
 #
 # 1. define edge weights as in plot (a)
 # 2. calculate vertex betweenness with cutoff 6 (b)
